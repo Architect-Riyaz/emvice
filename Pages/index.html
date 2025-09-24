@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emvice</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <main id="main">
+      <!-- top bar nav-bar -->
+      <section id="topbar" class="d-flex align-items-center py-2">
+        <div
+          class="container d-flex justify-content-center justify-content-md-between"
+        >
+          <div class="contact-info d-flex align-items-center">
+            <i class="bi bi-envelope d-flex align-items-center">
+              <a href="mailto:info@emvice.in">info@emvice.in</a>
+            </i>
+            <i class="bi bi-phone d-flex align-items-center ms-4">
+              <span><a href="tel:+1234567890">+91 9820111921</a></span>
+            </i>
+          </div>
+          <div class="social-links d-none d-md-flex align-items-center">
+            <a
+              href="https://twitter.com/example"
+              class="twitter"
+              target="_blank"
+            >
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a
+              href="https://facebook.com/example"
+              class="facebook ms-3"
+              target="_blank"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://linkedin.com/company/example"
+              class="linkedin ms-3"
+              target="_blank"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- header and nav bar -->
+      <header id="header" class="fixed-top bg-blue">
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <!-- Logo -->
+          <h1 class="logo mb-0">
+            <a href="/" class="text-white text-decoration-none">
+              <span>Emvice</span>
+            </a>
+          </h1>
+
+          <!-- Navbar -->
+          <nav id="navbar" class="navbar">
+            <ul class="d-flex list-unstyled mb-0">
+              <li>
+                <a
+                  class="nav-link active text-white px-3"
+                  href="/Pages/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="dropdown">
+                <a class="nav-link text-white px-3" href="/pages/services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="nav-link text-white px-3" href="/pages/team.html"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a class="nav-link text-white px-3" href="/pages/about.html"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a class="nav-link text-white px-3" href="/pages/contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a class="nav-link text-white px-3" href="/pages/FAQ.html"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a class="nav-link text-white px-3" href="/dashboard">Log In</a>
+              </li>
+            </ul>
+            <i
+              class="bi bi-list mobile-nav-toggle d-lg-none text-white fs-3"
+            ></i>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ======= Hero Section ======= -->
+      <section
+        id="hero"
+        class="d-flex align-items-center text-center text-lg-start bg-blue"
+        style="min-height: 100vh"
+      >
+        <div class="container">
+          <h1 class="display-5 fw-bold text-white">
+            Welcome to <span class="text-primary">Emvice</span>
+          </h1>
+          <h2 class="lead fw-normal text-light mb-4">
+            Accelerating business growth with us.
+          </h2>
+          <h6 class="text-white">Trust | Transparency | Reliability</h6>
+          <div
+            class="d-flex mt-3 justify-content-center justify-content-lg-start"
+          >
+            <a href="#services" class="btn btn-primary btn-lg px-4 me-3"
+              >Our Services</a
+            >
+            <a href="#about" class="btn btn-outline-light btn-lg px-4"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- End Hero -->
+
+      <!-- ======= Services Section ======= -->
+      <!-- Services Section -->
+      <section id="services" class="py-5">
+        <div class="container">
+          <div class="row" id="services-container">
+            <!-- Dynamic service cards will load here -->
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
+
+      <!-- ======= Counts Section ======= -->
+      <section id="counts" class="counts py-5 bg-light">
+        <div class="container">
+          <h2 class="section-title text-center mb-5">
+            Our <span class="text-primary">Achievements</span>
+          </h2>
+
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="bi bi-emoji-smile fa-2x mb-2"></i>
+                <h3>232</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="bi bi-journal-richtext fa-2x mb-2"></i>
+                <h3>521</h3>
+                <p>Projects</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="bi bi-headset fa-2x mb-2"></i>
+                <h3>1463</h3>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="count-box">
+                <i class="bi bi-people fa-2x mb-2"></i>
+                <h3>15</h3>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Counts Section -->
+
+      <!-- ======= Clients Section ======= -->
+      <section id="clients" class="clients section-bg py-5">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-lg-2 col-md-4 col-6 mb-3">
+              <img
+                src="assets/img/client1.png"
+                class="img-fluid"
+                alt="Client 1"
+              />
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-3">
+              <img
+                src="assets/img/client2.png"
+                class="img-fluid"
+                alt="Client 2"
+              />
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-3">
+              <img
+                src="assets/img/client3.png"
+                class="img-fluid"
+                alt="Client 3"
+              />
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-3">
+              <img
+                src="assets/img/client4.png"
+                class="img-fluid"
+                alt="Client 4"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Clients Section -->
+
+      <!-- ======= Testimonials Section ======= -->
+      <section id="testimonials" class="testimonials py-5 bg-light">
+        <div class="container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Example Testimonial 1 -->
+              <div class="swiper-slide">
+                <div class="testimonial-item text-center">
+                  <img
+                    src="assets/img/testimonial1.jpg"
+                    class="testimonial-img rounded-circle mb-3"
+                    alt="John Doe"
+                    style="width: 80px; height: 80px"
+                  />
+                  <h3>John Doe</h3>
+                  <h4>CEO, Company</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Emvice helped scale our business efficiently with innovative
+                    solutions.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Example Testimonial 2 -->
+              <div class="swiper-slide">
+                <div class="testimonial-item text-center">
+                  <img
+                    src="assets/img/testimonial2.jpg"
+                    class="testimonial-img rounded-circle mb-3"
+                    alt="Jane Smith"
+                    style="width: 80px; height: 80px"
+                  />
+                  <h3>Jane Smith</h3>
+                  <h4>Manager, Firm</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Trustworthy and transparent team delivering real results.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonials Section -->
+
+      <!-- Footer -->
+      <footer id="footer" class="text-light" role="contentinfo">
+        <div class="container py-5">
+          <!-- Newsletter -->
+          <div class="row justify-content-center mb-4">
+            <div class="col-12 col-md-10">
+              <div
+                class="p-4 rounded-3"
+                style="background: rgba(255, 255, 255, 0.03)"
+              >
+                <div class="row align-items-center g-3">
+                  <div class="col-md-6 text-center text-md-start">
+                    <h4 class="mb-1">Join Our Newsletter</h4>
+                    <p class="mb-0 text-light">
+                      Get the latest updates delivered to your inbox.
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <form id="footerNewsletterForm" class="d-flex" novalidate>
+                      <input
+                        type="email"
+                        name="email"
+                        id="footerNewsletterEmail"
+                        class="form-control me-2"
+                        placeholder="Enter your email"
+                        aria-label="Email address"
+                        required
+                      />
+                      <button class="btn btn-primary" type="submit">
+                        Subscribe
+                      </button>
+                    </form>
+
+                    <!-- inline messages -->
+                    <div
+                      id="footerNewsletterMsg"
+                      class="mt-2"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Links / Contact -->
+          <div class="row gy-4">
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="mb-3">Emvice</h5>
+              <address class="text-light mb-2">
+                S113, 2nd floor, Nano wing,<br />
+                Fantasia Business Park<br />
+                Navi Mumbai, Maharashtra 400073
+              </address>
+              <p class="mb-1">
+                <strong>Phone:</strong>
+                <a
+                  href="tel:+919820111921"
+                  class="text-light text-decoration-none"
+                  >+91 98201 11921</a
+                >
+              </p>
+              <p class="mb-0">
+                <strong>Email:</strong>
+                <a
+                  href="mailto:info@emvice.in"
+                  class="text-light text-decoration-none"
+                  >info@emvice.in</a
+                >
+              </p>
+            </div>
+
+            <!-- Useful Links -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="mb-3">Useful Links</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/pages/index.html"
+                    class="text-light text-decoration-none"
+                    >Home</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/pages/about.html"
+                    class="text-light text-decoration-none"
+                    >About us</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/pages/services.html"
+                    class="text-light text-decoration-none"
+                    >Services</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/pages/team.html"
+                    class="text-light text-decoration-none"
+                    >Terms of service</a
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/pages/contact.html"
+                    class="text-light text-decoration-none"
+                    >Contact US</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="mb-3">Our Services</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/Pages/services.html"
+                    class="text-light text-decoration-none"
+                    >EPFO Filing & Assistance</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/Pages/services.html"
+                    class="text-light text-decoration-none"
+                    >Factory Compliancy</a
+                  >
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/Pages/services.html"
+                    class="text-light text-decoration-none"
+                    >Labor Law</a
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-chevron-right me-2 text-primary"></i
+                  ><a
+                    href="/Pages/services.html"
+                    class="text-light text-decoration-none"
+                    >Statutory Compliance</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-lg-3 col-md-6">
+              <h5 class="mb-3">Follow Us</h5>
+              <p class="text-light">Stay connected for news and updates.</p>
+              <div class="d-flex gap-2">
+                <a
+                  href="https://twitter.com/example"
+                  class="btn btn-outline-light btn-sm rounded-circle"
+                  aria-label="Twitter"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a
+                  href="https://facebook.com/example"
+                  class="btn btn-outline-light btn-sm rounded-circle"
+                  aria-label="Facebook"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a
+                  href="https://linkedin.com/company/example"
+                  class="btn btn-outline-light btn-sm rounded-circle"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a
+                  href="https://instagram.com/example"
+                  class="btn btn-outline-light btn-sm rounded-circle"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom -->
+          <div class="row pt-4 mt-3 border-top border-secondary">
+            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+              <small class="text-light"
+                >&copy; <span id="footer-year"></span>
+                <strong class="text-light">Emvice</strong>. All Rights
+                Reserved.</small
+              >
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <small class="text-muted"
+                >Designed by
+                <a href="#" class="text-primary text-decoration-none"
+                  >CybeRelic</a
+                ></small
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap + Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          // Adjust path: index.html is inside /pages/, so go one level up
+          const res = await fetch("../data.json");
+          if (!res.ok) throw new Error("Failed to load services data.");
+
+          const data = await res.json();
+          const services = data.services || [];
+          const container = document.getElementById("services-container");
+
+          // Clear container
+          container.innerHTML = "";
+
+          // Generate service cards
+          services.forEach((service) => {
+            const col = document.createElement("div");
+            col.className = "col-md-4 mb-4";
+
+            col.innerHTML = `
+            <div class="card service-card shadow-lg border-0 h-100">
+              <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
+                <div class="card-logo mb-3">
+                  <i class="${service.icon} text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">${service.title}</h5>
+                <p class="card-text text-muted">${service.desc}</p>
+              </div>
+            </div>
+          `;
+            container.appendChild(col);
+          });
+        } catch (err) {
+          console.error("Error loading services:", err);
+          document.getElementById("services-container").innerHTML = `
+          <div class="col-12">
+            <div class="alert alert-danger text-center">Failed to load services.</div>
+          </div>
+        `;
+        }
+      });
+    </script>
+  </body>
+</html>
