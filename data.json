@@ -35,8 +35,8 @@
         "lastName": "arwin",
         "image": "/images/team-1.jpg"
       },
-      "designation": "",
-      "department": "",
+      "designation": "manager",
+      "department": "HRM",
       "social": {
         "twitter": "",
         "facebook": "",
@@ -50,8 +50,8 @@
         "lastName": "doe",
         "image": "/images/team-1.jpg"
       },
-      "designation": "",
-      "department": "",
+      "designation": "manager",
+      "department": "CRM",
       "social": {
         "twitter": "",
         "facebook": "",
