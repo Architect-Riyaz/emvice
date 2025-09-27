@@ -14,7 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-     <link rel="stylesheet" href="../style.css" />
+     <link rel="stylesheet" href="style.css" />
      </head>
    
   </head>
@@ -116,20 +116,33 @@
           </nav>
         </div>
       </header>
- <section id="team" class="team">
-      <div class="container">
-        <div class="section-title text-center mb-5">
-          <h2>Team</h2>
-          <h3>Our Hardworking <span>Team</span></h3>
-          <p>Always ready to address the help.</p>
-        </div>
 
-        <div class="row" id="team-container">
-          <!-- Dynamic team members will load here -->
+
+      <!-- heading section  -->
+        <div class="section-title text-center mb-7">
+            <h3 class="fw-bold">Our <span class="text-primary">Services</span></h3>
+            <p class="h3 text-muted">
+              
+            </p>
+          </div>
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-md-3 mb-3">
+            <div id="service-list" class="list-group rounded shadow-sm p-2">
+              <!-- Buttons injected by JS -->
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-md-9">
+            <div id="service-content" class="card shadow-sm p-4">
+              <h2 class="text-black">Select a service</h2>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-     <!-- Footer -->
+       <!-- Footer -->
       <footer id="footer" class="text-light" role="contentinfo">
         <div class="container py-5">
           <!-- Newsletter -->
@@ -337,81 +350,80 @@
           </div>
         </div>
       </footer>
-
-     
     </main>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- teams dynamic script -->
-      <script>
-     (async () => {
-      const container = document.getElementById('team-container');
+    <!-- Custom Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const res = await fetch("data.json"); // Adjust path if needed
+          if (!res.ok) throw new Error("Failed to fetch data.json");
+          const data = await res.json();
 
-      try {
-        const res = await fetch('../data.json'); // pages/team.html => ../data.json
-        if (!res.ok) throw new Error('Network response not OK: ' + res.status);
-        const data = await res.json();
-        const staff = Array.isArray(data.staff) ? data.staff : [];
+          const services = data.service || [];
+          const sidebar = document.getElementById("service-list");
+          const content = document.getElementById("service-content");
 
-        if (staff.length === 0) {
-          container.innerHTML = '<div class="col-12"><div class="alert alert-warning text-center">No team members found.</div></div>';
-          return;
-        }
+          if (!services.length) {
+            content.innerHTML = `<div class="alert alert-warning">No services found.</div>`;
+            return;
+          }
 
-        // Build DOM elements safely
-        container.innerHTML = ''; // clear
+          // Render sidebar buttons with icons
+          services.forEach((service, index) => {
+            const btn = document.createElement("button");
+            btn.className = `list-group-item list-group-item-action ${
+              index === 0 ? "active" : ""
+            }`;
+            btn.setAttribute("data-index", index);
+            btn.innerHTML = `<i class="bi ${service.icon} sidebar-icon"></i> ${service.name}`;
+            sidebar.appendChild(btn);
+          });
 
-        staff.forEach(member => {
-          // safe access with defaults
-          const firstName = member?.user?.firstName || 'Unknown';
-          const lastName = member?.user?.lastName || '';
-          const image = member?.user?.image || '/images/placeholder-team.jpg';
-          const designation = member?.designation || 'Team Member';
-
-          // collect social links
-          const socials = [];
-          if (member?.social?.twitter) socials.push(`<a href="${member.social.twitter}" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>`);
-          if (member?.social?.facebook) socials.push(`<a href="${member.social.facebook}" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>`);
-          if (member?.social?.instagram) socials.push(`<a href="${member.social.instagram}" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>`);
-          if (member?.social?.linkin) socials.push(`<a href="${member.social.linkin}" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>`);
-
-          const socialHtml = socials.length ? socials.join('') : `<span class="text-white small">No social links</span>`;
-
-          const col = document.createElement('div');
-          col.className = 'col-lg-3 col-md-6 d-flex align-items-stretch mb-4';
-          col.innerHTML = `
-            <div class="member w-100">
-              <div class="member-img">
-                <img src="${escapeHtmlAttr(image)}" alt="${escapeHtmlAttr(firstName + ' ' + lastName)}">
-                <div class="social">${socialHtml}</div>
-              </div>
-              <div class="member-info">
-                <h4>${escapeHtmlText(firstName)} ${escapeHtmlText(lastName)}</h4>
-                <span>${escapeHtmlText(designation)}</span>
-              </div>
+          // Function to load service details
+          function loadService(index) {
+            const service = services[index];
+            content.innerHTML = `
+            <h2 class="mb-3">${service.name}</h2>
+            <div class="d-flex flex-row justify-content-between">
+            <div class="service-body">
+             
+              <img src="${service.image}" alt="${service.name}" class="img-fluid shadow-sm my-3"/>
             </div>
+             <p class="mx-4 mt-5">${service.description}</p>
+             </div>
+              <a href="${service.pdf}" target="_blank" class="btn btn-primary btn-lg mt-3">
+              <i class="bi bi-file-earmark-arrow-down"></i> Download PDF
+            </a>
+            
           `;
-          container.appendChild(col);
-        });
+          }
 
-      } catch (err) {
-        console.error('Error loading team:', err);
-        container.innerHTML = '<div class="col-12"><div class="alert alert-danger text-center">Failed to load team members.</div></div>';
-      }
+          // Load the first service by default
+          loadService(0);
 
-      // === small helpers to avoid XSS from JSON (if JSON content is untrusted) ===
-      function escapeHtmlText(str) {
-        if (typeof str !== 'string') return '';
-        return str.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[s]);
-      }
-      function escapeHtmlAttr(str) {
-        // minimal attr escape; ensure not null
-        return escapeHtmlText(String(str || ''));
-      }
-    })();
-  </script>
-   
+          // Sidebar click event
+          sidebar.addEventListener("click", (e) => {
+            if (e.target.tagName === "BUTTON" || e.target.closest("button")) {
+              const btn = e.target.closest("button");
+              const index = btn.getAttribute("data-index");
+              document
+                .querySelectorAll("#service-list button")
+                .forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+              loadService(index);
+            }
+          });
+        } catch (err) {
+          console.error("Error loading services:", err);
+          document.getElementById("service-content").innerHTML = `
+          <div class="alert alert-danger">Failed to load services.</div>
+        `;
+        }
+      });
+    </script>
   </body>
 </html>
