@@ -60,7 +60,8 @@
       </section>
 
       <!-- header and nav bar -->
-     <header id="header" class="fixed-top bg-blue">
+
+       <header id="header" class="fixed-top bg-blue">
         <div
           class="container d-flex align-items-center justify-content-between"
         >
@@ -72,50 +73,60 @@
           </h1>
 
           <!-- Navbar -->
-          <nav id="navbar" class="navbar">
-            <ul class="d-flex list-unstyled mb-0">
-              <li>
-                <a
-                  class="nav-link active text-white px-3"
-                  href="/index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="dropdown">
-                <a class="nav-link text-white px-3" href="/services.html"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a class="nav-link text-white px-3" href="/team.html"
-                  >Team</a
-                >
-              </li>
-              <li>
-                <a class="nav-link text-white px-3" href="/about.html"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a class="nav-link text-white px-3" href="/contact.html"
-                  >Contact</a
-                >
-              </li>
-              <li>
-                <a class="nav-link text-white px-3" href="/FAQ.html"
-                  >FAQ</a
-                >
-              </li>
-              <li>
-                <a class="nav-link text-white px-3" href="/dashboard">Log In</a>
-              </li>
-            </ul>
-            <i
-              class="bi bi-list mobile-nav-toggle d-lg-none text-white fs-3"
-            ></i>
+          <nav id="navbar" class="navbar navbar-expand-lg">
+            <!-- Bootstrap Hamburger Toggle -->
+            <button
+              class="navbar-toggler text-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="d-flex list-unstyled mb-0 navbar-nav ms-auto">
+                <li>
+                  <a class="nav-link active text-white px-3" href="/index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="dropdown">
+                  <a class="nav-link text-white px-3" href="/services.html"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-white px-3" href="/team.html">Team</a>
+                </li>
+                <li>
+                  <a class="nav-link text-white px-3" href="/about.html"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-white px-3" href="/contact.html"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-white px-3" href="/FAQ.html">FAQ</a>
+                </li>
+                <li>
+                  <a class="nav-link text-white px-3" href="/dashboard"
+                    >Log In</a
+                  >
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </header>
+
+      
+      <!-- navbar ends  -->
  <section id="team" class="team">
       <div class="container">
         <div class="section-title text-center mb-5">
@@ -342,8 +353,8 @@
     </main>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- teams dynamic script -->
       <script>
      (async () => {
