@@ -1,631 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emvice</title>
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main id="main">
-      <!-- top bar nav-bar -->
-      <section id="topbar" class="d-flex align-items-center py-2">
-        <div
-          class="container d-flex justify-content-center justify-content-md-between"
-        >
-          <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope d-flex align-items-center">
-              <a href="mailto:info@emvice.in">info@emvice.in</a>
-            </i>
-            <i class="bi bi-phone d-flex align-items-center ms-4">
-              <span><a href="tel:+1234567890">+91 9820111921</a></span>
-            </i>
-          </div>
-          <div class="social-links d-none d-md-flex align-items-center">
-            <a
-              href="https://twitter.com/example"
-              class="twitter"
-              target="_blank"
-            >
-              <i class="bi bi-twitter"></i>
-            </a>
-            <a
-              href="https://facebook.com/example"
-              class="facebook ms-3"
-              target="_blank"
-            >
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a
-              href="https://linkedin.com/company/example"
-              class="linkedin ms-3"
-              target="_blank"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- header and nav bar -->
-      <header id="header" class="fixed-top bg-blue">
-        <div
-          class="container d-flex align-items-center justify-content-between"
-        >
-          <!-- Logo -->
-          <h1 class="logo mb-0">
-            <a href="/" class="text-white text-decoration-none">
-              <span>Emvice</span>
-            </a>
-          </h1>
-
-          <!-- Navbar -->
-          <nav id="navbar" class="navbar navbar-expand-lg">
-            <!-- Bootstrap Hamburger Toggle -->
-            <button
-              class="navbar-toggler text-white"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="d-flex list-unstyled mb-0 navbar-nav ms-auto">
-                <li>
-                  <a class="nav-link active text-white px-3" href="/index.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="dropdown">
-                  <a class="nav-link text-white px-3" href="/services.html"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/team.html">Team</a>
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/about.html"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/contact.html"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/FAQ.html">FAQ</a>
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/dashboard"
-                    >Log In</a
-                  >
-                </li>
-              </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emvice - Accelerating Business Growth with Compliance Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">EMVICE</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#" class="btn-login">Log In</a></li>
+                </ul>
             </div>
-          </nav>
-        </div>
-      </header>
+        </nav>
+    </header>
 
-      <!-- ======= Hero Section ======= -->
-      <section
-        id="hero"
-        class="d-flex align-items-center text-center text-lg-start bg-blue"
-        style="min-height: 100vh"
-      >
+    <section class="hero">
         <div class="container">
-          <h1
-            class="display-5 lead fw-normal text-light mb-4 animate__animated animate__fadeInUp animate__delay-1s"
-          >
-            Welcome to <span class="text-primary">Emvice</span>
-          </h1>
-          <h2
-            class="lead fw-normal text-light mb-4 animate__animated animate__fadeInUp animate__delay-1s"
-          >
-            Accelerating business growth with us.
-          </h2>
-          <h6
-            class="text-white text-white animate__animated animate__zoomIn animate__delay-2s"
-          >
-            Trust | Transparency | Reliability
-          </h6>
-          <div
-            class="d-flex mt-3 justify-content-center justify-content-lg-start"
-          >
-            <a href="#services" class="btn btn-primary btn-lg px-4 me-3"
-              >Our Services</a
-            >
-            <a href="./contact.html" class="btn btn-outline-light btn-lg px-4"
-              >Learn More</a
-            >
-          </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Accelerating Business Growth with Us</h1>
+                <p class="hero-subtitle">Your trusted partner in compliance and business solutions</p>
+                <div class="hero-values">
+                    <span class="value-badge">Trust</span>
+                    <span class="value-divider">|</span>
+                    <span class="value-badge">Transparency</span>
+                    <span class="value-divider">|</span>
+                    <span class="value-badge">Reliability</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="services.html" class="btn btn-primary">Our Services</a>
+                    <a href="contact.html" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
         </div>
-      </section>
-      <!-- End Hero -->
+    </section>
 
-      <!-- ======= Services Section ======= -->
-      <!-- Services Section -->
-      <section id="services" class="py-5">
+    <section class="stats">
         <div class="container">
-          <div class="row" id="services-container">
-            <!-- Dynamic service cards will load here -->
-          </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">232</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">521</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1463</div>
+                    <div class="stat-label">Hours of Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Dedicated Team</div>
+                </div>
+            </div>
         </div>
-      </section>
-      <!-- End Services Section -->
+    </section>
 
-      <!-- ======= Counts Section ======= -->
-      <section id="counts" class="counts py-5 bg-light">
+    <section class="services-preview">
         <div class="container">
-          <h2 class="section-title text-center mb-5">
-            Our <span class="text-primary">Achievements</span>
-          </h2>
-
-          <div class="row text-center">
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-emoji-smile fa-2x mb-2"></i>
-                <h3>232</h3>
-                <p>Happy Clients</p>
-              </div>
+            <div class="section-header">
+                <h2>Our Core Services</h2>
+                <p>Comprehensive compliance and business solutions tailored to your needs</p>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-journal-richtext fa-2x mb-2"></i>
-                <h3>521</h3>
-                <p>Projects</p>
-              </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>EPFO Filing & Assistance</h3>
+                    <p>Comprehensive EPFO compliance management, employee registration, and seamless filing assistance.</p>
+                    <a href="services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3>Factory Compliancy</h3>
+                    <p>Ensure your factory meets all regulatory requirements with our expert compliance solutions.</p>
+                    <a href="services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Labor Law Compliance</h3>
+                    <p>Navigate complex labor laws with confidence through our specialized legal guidance.</p>
+                    <a href="services.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Statutory Compliance</h3>
+                    <p>Complete statutory compliance management to keep your business running smoothly.</p>
+                    <a href="services.html" class="service-link">Learn More →</a>
+                </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-headset fa-2x mb-2"></i>
-                <h3>1463</h3>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="count-box">
-                <i class="bi bi-people fa-2x mb-2"></i>
-                <h3>15</h3>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-      <!-- End Counts Section -->
+    </section>
 
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients section-bg py-5">
+    <section class="clients">
         <div class="container">
-          <div class="row text-center">
-            <div class="col-lg-2 col-md-4 col-6 mb-3">
-              <img
-                src="assets/img/client1.png"
-                class="img-fluid"
-                alt="Client 1"
-              />
+            <div class="section-header">
+                <h2>Trusted by Leading Organizations</h2>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 mb-3">
-              <img
-                src="assets/img/client2.png"
-                class="img-fluid"
-                alt="Client 2"
-              />
+            <div class="clients-grid">
+                <div class="client-logo">
+                    <div class="logo-placeholder">CLIENT LOGO</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">CLIENT LOGO</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">CLIENT LOGO</div>
+                </div>
+                <div class="client-logo">
+                    <div class="logo-placeholder">CLIENT LOGO</div>
+                </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-6 mb-3">
-              <img
-                src="assets/img/client3.png"
-                class="img-fluid"
-                alt="Client 3"
-              />
-            </div>
-            <div class="col-lg-2 col-md-4 col-6 mb-3">
-              <img
-                src="assets/img/client4.png"
-                class="img-fluid"
-                alt="Client 4"
-              />
-            </div>
-          </div>
         </div>
-      </section>
-      <!-- End Clients Section -->
+    </section>
 
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials py-5">
-        <div class="container position-relative">
-          <!-- Title -->
-          <div class="section-title text-center mb-5">
-            <h2 class="text-white">What Our Clients Say</h2>
-          </div>
-
-          <!-- Swiper -->
-          <div class="swiper testimonials-slider">
-            <div class="swiper-wrapper">
-              <!-- Testimonial 1 -->
-              <div class="swiper-slide">
-                <div
-                  class="testimonial-item shadow-lg p-4 rounded text-center bg-dark text-white"
-                >
-                  <h3>Prakash Shah</h3>
-                  <h4 class="text-muted">MD, Radisson Blu</h4>
-                  <p class="fst-italic">
-                    <i class="bx bxs-quote-alt-left text-primary"></i>
-                    "Emvice transformed our compliance management system. Highly
-                    professional and reliable team!"
-                    <i class="bx bxs-quote-alt-right text-primary"></i>
-                  </p>
-                </div>
-              </div>
-
-              <!-- Testimonial 2 -->
-              <div class="swiper-slide">
-                <div
-                  class="testimonial-item shadow-lg p-4 rounded text-center bg-dark text-white"
-                >
-                  <h3>Jane Smith</h3>
-                  <h4 class="text-muted">HR Head, XYZ Pvt Ltd</h4>
-                  <p class="fst-italic">
-                    <i class="bx bxs-quote-alt-left text-primary"></i>
-                    "Their solutions are flexible and efficient. We could
-                    streamline our HR and compliance with ease."
-                    <i class="bx bxs-quote-alt-right text-primary"></i>
-                  </p>
-                </div>
-              </div>
-
-              <!-- Testimonial 3 -->
-              <div class="swiper-slide">
-                <div
-                  class="testimonial-item shadow-lg p-4 rounded text-center bg-dark text-white"
-                >
-                  <h3>Ravi Kumar</h3>
-                  <h4 class="text-muted">Entrepreneur</h4>
-                  <p class="fst-italic">
-                    <i class="bx bxs-quote-alt-left text-primary"></i>
-                    "Great support team and outstanding services. Emvice truly
-                    cares about client growth."
-                    <i class="bx bxs-quote-alt-right text-primary"></i>
-                  </p>
-                </div>
-              </div>
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from businesses who have transformed their compliance processes with us</p>
             </div>
-
-            <!-- Pagination -->
-            <div class="swiper-pagination mt-4"></div>
-
-            <!-- Navigation Buttons -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Emvice transformed our compliance management system. Their expertise and dedication have made a significant impact on our operations.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div class="author-info">
+                            <div class="author-name">Prakash Shah</div>
+                            <div class="author-title">MD, Radisson Blu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Their solutions are flexible and efficient. The team at Emvice understands our needs and delivers beyond expectations.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <div class="author-name">Jane Smith</div>
+                            <div class="author-title">HR Head, XYZ Pvt Ltd</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Great support team and outstanding services. Emvice has been instrumental in helping us maintain compliance effortlessly.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <div class="author-name">Ravi Kumar</div>
+                            <div class="author-title">Entrepreneur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- End Testimonials Section -->
-
-      <!-- Footer -->
-      <footer id="footer" class="text-light" role="contentinfo">
-        <div class="container py-5">
-          <!-- Newsletter -->
-          <div class="row justify-content-center mb-4">
-            <div class="col-12 col-md-10">
-              <div
-                class="p-4 rounded-3"
-                style="background: rgba(255, 255, 255, 0.03)"
-              >
-                <div class="row align-items-center g-3">
-                  <div class="col-md-6 text-center text-md-start">
-                    <h4 class="mb-1">Join Our Newsletter</h4>
-                    <p class="mb-0 text-light">
-                      Get the latest updates delivered to your inbox.
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <form id="footerNewsletterForm" class="d-flex" novalidate>
-                      <input
-                        type="email"
-                        name="email"
-                        id="footerNewsletterEmail"
-                        class="form-control me-2"
-                        placeholder="Enter your email"
-                        aria-label="Email address"
-                        required
-                      />
-                      <button class="btn btn-primary" type="submit">
-                        Subscribe
-                      </button>
-                    </form>
-
-                    <!-- inline messages -->
-                    <div
-                      id="footerNewsletterMsg"
-                      class="mt-2"
-                      aria-live="polite"
-                    ></div>
-                  </div>
-                </div>
-              </div>
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest compliance updates and insights</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
-          </div>
-
-          <!-- Links / Contact -->
-          <div class="row gy-4">
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Emvice</h5>
-              <address class="text-light mb-2">
-                S113, 2nd floor, Nano wing,<br />
-                Fantasia Business Park<br />
-                Navi Mumbai, Maharashtra 400073
-              </address>
-              <p class="mb-1">
-                <strong>Phone:</strong>
-                <a
-                  href="tel:+919820111921"
-                  class="text-light text-decoration-none"
-                  >+91 98201 11921</a
-                >
-              </p>
-              <p class="mb-0">
-                <strong>Email:</strong>
-                <a
-                  href="mailto:info@emvice.in"
-                  class="text-light text-decoration-none"
-                  >info@emvice.in</a
-                >
-              </p>
-            </div>
-
-            <!-- Useful Links -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Useful Links</h5>
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/index.html" class="text-light text-decoration-none"
-                    >Home</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/about.html" class="text-light text-decoration-none"
-                    >About us</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Services</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/team.html" class="text-light text-decoration-none"
-                    >Terms of service</a
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/contact.html"
-                    class="text-light text-decoration-none"
-                    >Contact US</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Our Services -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Our Services</h5>
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >EPFO Filing & Assistance</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Factory Compliancy</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Labor Law</a
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Statutory Compliance</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Social -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Follow Us</h5>
-              <p class="text-light">Stay connected for news and updates.</p>
-              <div class="d-flex gap-2">
-                <a
-                  href="https://twitter.com/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="Twitter"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-twitter"></i
-                ></a>
-                <a
-                  href="https://facebook.com/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="Facebook"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a
-                  href="https://linkedin.com/company/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="LinkedIn"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-linkedin"></i
-                ></a>
-                <a
-                  href="https://instagram.com/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="Instagram"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom -->
-          <div class="row pt-4 mt-3 border-top border-secondary">
-            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-              <small class="text-light"
-                >&copy; <span id="footer-year"></span>
-                <strong class="text-light">Emvice</strong>. All Rights
-                Reserved.</small
-              >
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-              <small class="text-muted"
-                >Designed by
-                <a href="#" class="text-primary text-decoration-none"
-                  >CybeRelic</a
-                ></small
-              >
-            </div>
-          </div>
         </div>
-      </footer>
-    </main>
+    </section>
 
-    <!-- Bootstrap + Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        try {
-          // Adjust path: index.html is inside /, so go one level up
-          const res = await fetch("data.json");
-          if (!res.ok) throw new Error("Failed to load services data.");
-
-          const data = await res.json();
-          const services = data.services || [];
-          const container = document.getElementById("services-container");
-
-          // Clear container
-          container.innerHTML = "";
-
-          // Generate service cards
-          services.forEach((service) => {
-            const col = document.createElement("div");
-            col.className = "col-md-4 mb-4";
-
-            col.innerHTML = `
-            <div class="card service-card shadow-lg border-0 h-100">
-              <div class="card-body text-center d-flex flex-column align-items-center justify-content-center">
-                <div class="card-logo mb-3">
-                  <i class="${service.icon} text-primary"></i>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">EMVICE</h3>
+                    <p>Accelerating business growth with trust, transparency, and reliability.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <h5 class="card-title fw-bold">${service.title}</h5>
-                <p class="card-text text-muted">${service.desc}</p>
-              </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">EPFO Filing & Assistance</a></li>
+                        <li><a href="services.html">Factory Compliancy</a></li>
+                        <li><a href="services.html">Labor Law</a></li>
+                        <li><a href="services.html">Statutory Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>S113, 2nd floor, Nano wing</li>
+                        <li>Fantasia Business Park</li>
+                        <li>Navi Mumbai</li>
+                        <li><a href="tel:+919820111921">+91 98201 11921</a></li>
+                        <li><a href="mailto:info@emvice.in">info@emvice.in</a></li>
+                    </ul>
+                </div>
             </div>
-          `;
-            container.appendChild(col);
-          });
-        } catch (err) {
-          console.error("Error loading services:", err);
-          document.getElementById("services-container").innerHTML = `
-          <div class="col-12">
-            <div class="alert alert-danger text-center">Failed to load services.</div>
-          </div>
-        `;
-        }
-      });
-    </script>
-    <!-- testimonial script -->
-    <script>
-      var swipers = new Swiper(".testimonials-slider", {
-        loop: true,
-        grabCursor: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 4000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1200: { slidesPerView: 3 },
-        },
-      });
-    </script>
-  </body>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Emvice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

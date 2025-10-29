@@ -1,438 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services Page</title>
-    <!-- Bootstrap 5.3.7 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap Icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-     <link rel="stylesheet" href="style.css" />
-     </head>
-   
-  </head>
-  <body>
-    <main class="servicespage">
-      <!-- top bar nav-bar -->
-      <section id="topbar" class="d-flex align-items-center py-2">
-        <div
-          class="container d-flex justify-content-center justify-content-md-between"
-        >
-          <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-envelope d-flex align-items-center">
-              <a href="mailto:info@emvice.in">info@emvice.in</a>
-            </i>
-            <i class="bi bi-phone d-flex align-items-center ms-4">
-              <span><a href="tel:+1234567890">+91 9820111921</a></span>
-            </i>
-          </div>
-          <div class="social-links d-none d-md-flex align-items-center">
-            <a
-              href="https://twitter.com/example"
-              class="twitter"
-              target="_blank"
-            >
-              <i class="bi bi-twitter"></i>
-            </a>
-            <a
-              href="https://facebook.com/example"
-              class="facebook ms-3"
-              target="_blank"
-            >
-              <i class="bi bi-facebook"></i>
-            </a>
-            <a
-              href="https://linkedin.com/company/example"
-              class="linkedin ms-3"
-              target="_blank"
-            >
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- header and nav bar -->
-   <header id="header" class="fixed-top bg-blue">
-        <div
-          class="container d-flex align-items-center justify-content-between"
-        >
-          <!-- Logo -->
-          <h1 class="logo mb-0">
-            <a href="/" class="text-white text-decoration-none">
-              <span>Emvice</span>
-            </a>
-          </h1>
-
-          <!-- Navbar -->
-          <nav id="navbar" class="navbar navbar-expand-lg">
-            <!-- Bootstrap Hamburger Toggle -->
-            <button
-              class="navbar-toggler text-white"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="d-flex list-unstyled mb-0 navbar-nav ms-auto">
-                <li>
-                  <a class="nav-link active text-white px-3" href="/index.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="dropdown">
-                  <a class="nav-link text-white px-3" href="/services.html"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/team.html">Team</a>
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/about.html"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/contact.html"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/FAQ.html">FAQ</a>
-                </li>
-                <li>
-                  <a class="nav-link text-white px-3" href="/dashboard"
-                    >Log In</a
-                  >
-                </li>
-              </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Emvice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">EMVICE</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#" class="btn-login">Log In</a></li>
+                </ul>
             </div>
-          </nav>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive compliance solutions designed to help your business thrive</p>
         </div>
-      </header>
+    </section>
 
-
-      <!-- heading section  -->
-        <div class="section-title text-center mb-7">
-            <h3 class="fw-bold">Our <span class="text-primary">Services</span></h3>
-            <p class="h3 text-muted">
-              
-            </p>
-          </div>
-      <div class="container-fluid mt-4">
-        <div class="row">
-          <!-- Sidebar -->
-          <div class="col-md-3 mb-3">
-            <div id="service-list" class="list-group rounded shadow-sm p-2">
-              <!-- Buttons injected by JS -->
-            </div>
-          </div>
-
-          <!-- Main Content -->
-          <div class="col-md-9">
-            <div id="service-content" class="card shadow-sm p-4">
-              <h2 class="text-black">Select a service</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-       <!-- Footer -->
-      <footer id="footer" class="text-light" role="contentinfo">
-        <div class="container py-5">
-          <!-- Newsletter -->
-          <div class="row justify-content-center mb-4">
-            <div class="col-12 col-md-10">
-              <div
-                class="p-4 rounded-3"
-                style="background: rgba(255, 255, 255, 0.03)"
-              >
-                <div class="row align-items-center g-3">
-                  <div class="col-md-6 text-center text-md-start">
-                    <h4 class="mb-1">Join Our Newsletter</h4>
-                    <p class="mb-0 text-light">
-                      Get the latest updates delivered to your inbox.
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <form id="footerNewsletterForm" class="d-flex" novalidate>
-                      <input
-                        type="email"
-                        name="email"
-                        id="footerNewsletterEmail"
-                        class="form-control me-2"
-                        placeholder="Enter your email"
-                        aria-label="Email address"
-                        required
-                      />
-                      <button class="btn btn-primary" type="submit">
-                        Subscribe
-                      </button>
-                    </form>
-
-                    <!-- inline messages -->
-                    <div
-                      id="footerNewsletterMsg"
-                      class="mt-2"
-                      aria-live="polite"
-                    ></div>
-                  </div>
+    <section class="services-detail">
+        <div class="container">
+            <div class="service-detail-card">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h2>EPFO Filing & Assistance</h2>
+                    <p class="service-description">Navigate the complexities of Employee Provident Fund Organization compliance with our expert assistance. We provide end-to-end support for all your EPFO-related needs.</p>
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Complete EPFO registration and setup</li>
+                            <li>Monthly return filing and compliance</li>
+                            <li>Employee registration and UAN generation</li>
+                            <li>Transfer claims and settlement assistance</li>
+                            <li>Withdrawal and advance claim support</li>
+                            <li>EPFO inspection handling</li>
+                            <li>Audit and reconciliation services</li>
+                            <li>Digital signature certificate management</li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Links / Contact -->
-          <div class="row gy-4">
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Emvice</h5>
-              <address class="text-light mb-2">
-                S113, 2nd floor, Nano wing,<br />
-                Fantasia Business Park<br />
-                Navi Mumbai, Maharashtra 400073
-              </address>
-              <p class="mb-1">
-                <strong>Phone:</strong>
-                <a
-                  href="tel:+919820111921"
-                  class="text-light text-decoration-none"
-                  >+91 98201 11921</a
-                >
-              </p>
-              <p class="mb-0">
-                <strong>Email:</strong>
-                <a
-                  href="mailto:info@emvice.in"
-                  class="text-light text-decoration-none"
-                  >info@emvice.in</a
-                >
-              </p>
             </div>
 
-            <!-- Useful Links -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Useful Links</h5>
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/index.html" class="text-light text-decoration-none">Home</a>
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/about.html" class="text-light text-decoration-none"
-                    >About us</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/services.html" class="text-light text-decoration-none"
-                    >Services</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/team.html" class="text-light text-decoration-none"
-                    >Terms of service</a
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a href="/contact.html" class="text-light text-decoration-none"
-                    >Contact US</a
-                  >
-                </li>
-              </ul>
+            <div class="service-detail-card">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h2>Factory Compliancy</h2>
+                    <p class="service-description">Ensure your manufacturing facility meets all regulatory requirements with our comprehensive factory compliance solutions. Stay ahead of inspections and maintain operational excellence.</p>
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Factory license registration and renewal</li>
+                            <li>Factory Act compliance management</li>
+                            <li>Safety and health regulations adherence</li>
+                            <li>Environmental compliance solutions</li>
+                            <li>Fire safety and emergency protocols</li>
+                            <li>Workplace safety audits</li>
+                            <li>Machinery and equipment certifications</li>
+                            <li>Regular compliance monitoring and reporting</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- Our Services -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Our Services</h5>
-              <ul class="list-unstyled">
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >EPFO Filing & Assistance</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Factory Compliancy</a
-                  >
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Labor Law</a
-                  >
-                </li>
-                <li>
-                  <i class="bi bi-chevron-right me-2 text-primary"></i
-                  ><a
-                    href="/services.html"
-                    class="text-light text-decoration-none"
-                    >Statutory Compliance</a
-                  >
-                </li>
-              </ul>
+            <div class="service-detail-card">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h2>Labor Law Compliance</h2>
+                    <p class="service-description">Navigate the intricate landscape of labor laws with confidence. Our specialized legal team ensures your organization remains compliant with all employment regulations.</p>
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Contract labor compliance</li>
+                            <li>Minimum wages implementation</li>
+                            <li>Payment of wages management</li>
+                            <li>Employee State Insurance (ESI) compliance</li>
+                            <li>Shops and Establishment Act registration</li>
+                            <li>Maternity benefits administration</li>
+                            <li>Gratuity and bonus calculations</li>
+                            <li>Legal advisory and dispute resolution</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- Social -->
-            <div class="col-lg-3 col-md-6">
-              <h5 class="mb-3">Follow Us</h5>
-              <p class="text-light">Stay connected for news and updates.</p>
-              <div class="d-flex gap-2">
-                <a
-                  href="https://twitter.com/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="Twitter"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-twitter"></i
-                ></a>
-                <a
-                  href="https://facebook.com/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="Facebook"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a
-                  href="https://linkedin.com/company/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="LinkedIn"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-linkedin"></i
-                ></a>
-                <a
-                  href="https://instagram.com/example"
-                  class="btn btn-outline-light btn-sm rounded-circle"
-                  aria-label="Instagram"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-              </div>
+            <div class="service-detail-card">
+                <div class="service-detail-content">
+                    <div class="service-detail-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h2>Statutory Compliance</h2>
+                    <p class="service-description">Comprehensive statutory compliance management to keep your business operations smooth and legally sound. We handle all regulatory requirements so you can focus on growth.</p>
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Professional Tax registration and filing</li>
+                            <li>GST compliance and return filing</li>
+                            <li>TDS compliance and returns</li>
+                            <li>Income tax compliance</li>
+                            <li>Annual return preparations</li>
+                            <li>Statutory register maintenance</li>
+                            <li>Notice handling and responses</li>
+                            <li>Compliance calendar management</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <!-- Bottom -->
-          <div class="row pt-4 mt-3 border-top border-secondary">
-            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-              <small class="text-light"
-                >&copy; <span id="footer-year"></span>
-                <strong class="text-light">Emvice</strong>. All Rights
-                Reserved.</small
-              >
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-              <small class="text-muted"
-                >Designed by
-                <a href="#" class="text-primary text-decoration-none"
-                  >CybeRelic</a
-                ></small
-              >
-            </div>
-          </div>
         </div>
-      </footer>
-    </main>
+    </section>
 
-    <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-     
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <!-- Custom Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        try {
-          const res = await fetch("data.json"); // Adjust path if needed
-          if (!res.ok) throw new Error("Failed to fetch data.json");
-          const data = await res.json();
-
-          const services = data.service || [];
-          const sidebar = document.getElementById("service-list");
-          const content = document.getElementById("service-content");
-
-          if (!services.length) {
-            content.innerHTML = `<div class="alert alert-warning">No services found.</div>`;
-            return;
-          }
-
-          // Render sidebar buttons with icons
-          services.forEach((service, index) => {
-            const btn = document.createElement("button");
-            btn.className = `list-group-item list-group-item-action ${
-              index === 0 ? "active" : ""
-            }`;
-            btn.setAttribute("data-index", index);
-            btn.innerHTML = `<i class="bi ${service.icon} sidebar-icon"></i> ${service.name}`;
-            sidebar.appendChild(btn);
-          });
-
-          // Function to load service details
-          function loadService(index) {
-            const service = services[index];
-            content.innerHTML = `
-            <h2 class="mb-3">${service.name}</h2>
-            <div class="d-flex flex-row justify-content-between">
-            <div class="service-body">
-             
-              <img src="${service.image}" alt="${service.name}" class="img-fluid shadow-sm my-3"/>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Streamline Your Compliance?</h2>
+                <p>Let our experts handle your compliance needs while you focus on growing your business</p>
+                <a href="contact.html" class="btn btn-primary">Get Started Today</a>
             </div>
-             <p class="mx-4 mt-5">${service.description}</p>
-             </div>
-              <a href="${service.pdf}" target="_blank" class="btn btn-primary btn-lg mt-3">
-              <i class="bi bi-file-earmark-arrow-down"></i> Download PDF
-            </a>
-            
-          `;
-          }
+        </div>
+    </section>
 
-          // Load the first service by default
-          loadService(0);
-
-          // Sidebar click event
-          sidebar.addEventListener("click", (e) => {
-            if (e.target.tagName === "BUTTON" || e.target.closest("button")) {
-              const btn = e.target.closest("button");
-              const index = btn.getAttribute("data-index");
-              document
-                .querySelectorAll("#service-list button")
-                .forEach((b) => b.classList.remove("active"));
-              btn.classList.add("active");
-              loadService(index);
-            }
-          });
-        } catch (err) {
-          console.error("Error loading services:", err);
-          document.getElementById("service-content").innerHTML = `
-          <div class="alert alert-danger">Failed to load services.</div>
-        `;
-        }
-      });
-    </script>
-  </body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-logo">EMVICE</h3>
+                    <p>Accelerating business growth with trust, transparency, and reliability.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">EPFO Filing & Assistance</a></li>
+                        <li><a href="services.html">Factory Compliancy</a></li>
+                        <li><a href="services.html">Labor Law</a></li>
+                        <li><a href="services.html">Statutory Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>S113, 2nd floor, Nano wing</li>
+                        <li>Fantasia Business Park</li>
+                        <li>Navi Mumbai</li>
+                        <li><a href="tel:+919820111921">+91 98201 11921</a></li>
+                        <li><a href="mailto:info@emvice.in">info@emvice.in</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Emvice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
